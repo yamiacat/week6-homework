@@ -33,6 +33,13 @@ class Fate {
 //     }
 // }
 
+  public void castDown(CelestialAbode celestialAbode){
+    God[] targets = getPantheon();
+      for (God god : targets) {
+        obliterate(god);
+      }
+    wipePantheon();
+    }
 
 
 }

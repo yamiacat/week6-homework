@@ -64,19 +64,19 @@ Fate fate;
     assertEquals(0, fate.primordialChaosCount());
   }
 
-  // @Test
-  // public void fateCanCastDownGods(){
-  //   celestialAbode1.deify(god1);
-  //   fate.castDown(celestialAbode1);
-  //   assertEquals(0, celestialAbode1.pantheonCount());
-  // }
-
   @Test
-  public void abodeCanCastGodsOut(){
+  public void fateCanCastDownGods(){
     celestialAbode1.deify(god1);
-    celestialAbode1.castOut(god1);
+    fate.castDown(celestialAbode1);
     assertEquals(0, celestialAbode1.pantheonCount());
   }
+
+  // @Test
+  // public void abodeCanCastGodsOut(){
+  //   celestialAbode1.deify(god1);
+  //   celestialAbode1.castOut(god1);
+  //   assertEquals(0, celestialAbode1.pantheonCount());
+  // }
 
 
 }
