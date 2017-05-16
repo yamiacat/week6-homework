@@ -10,4 +10,7 @@ public class AnalogCamera implements Printable {
     this.specialMode = specialMode;
   }
 
+  public String printDetails(){
+    return ("Name: " + this.name + ", Details: " + this.details);
+  }
 }

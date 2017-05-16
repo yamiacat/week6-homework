@@ -10,16 +10,8 @@ public class DigitalCamera implements Printable {
     this.hiddenFunction = hiddenFunction;
   }
 
-}
-
-
-
-
-
-
-
-
   public String printDetails(){
-
+    return ("Name: " + this.name + ", Details: " + this.details);
   }
+
 }
