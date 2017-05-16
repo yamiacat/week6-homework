@@ -11,7 +11,11 @@ public class DigitalCamera implements Printable {
   }
 
   public String printDetails(){
-    return ("Name: " + this.name + ", Details: " + this.details);
+    return (" - Name: " + this.name + ", Details: " + this.details);
+  }
+
+  public String printBlackOps(){
+    return (" - Mission Spec: " + this.hiddenFunction);
   }
 
 }
