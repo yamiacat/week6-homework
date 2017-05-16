@@ -33,9 +33,15 @@ public class CelestialAbode {
     return pantheonCount() == pantheon.length;
   }
 
-
-
-
+//CANT FIGURE OUT HOW TO RETURN A GOD AND DELETE THEM FROM THE ARRAY
+  public God castOut(God targetGod){
+    for (God god : pantheon){
+      if (god == targetGod){
+        return god;
+      }
+    }
+    return null;
+  }
 
 
 

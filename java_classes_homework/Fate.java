@@ -15,5 +15,24 @@ class Fate {
     return count;
   }
 
+  public void obliterate(God god){
+    if (isChaosFull()) {
+      return;
+    }
+    int chaosIndex = primordialChaosCount();
+    primordialChaos[chaosIndex] = god;
+  }
+
+  public boolean isChaosFull(){
+    return primordialChaosCount() == primordialChaos.length;
+  }
+
+//   public void castDown(CelestialAbode celestialAbode){
+//     for (God god : pantheon) {
+//       obliterate(god);
+//     }
+// }
+
+
 
 }

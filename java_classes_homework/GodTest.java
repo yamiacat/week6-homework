@@ -43,7 +43,6 @@ Fate fate;
     assertEquals(1,celestialAbode1.pantheonCount());
   }
 
-
   @Test
   public void godCannotAscendWhenPantheonFull(){
     for(int i = 0; i < 15; i++) {
@@ -51,8 +50,6 @@ Fate fate;
     }
     assertEquals(12, celestialAbode1.pantheonCount());
   }
-
-
 
   @Test
   public void isPantheonFull(){
@@ -62,14 +59,24 @@ Fate fate;
     assertEquals(true, celestialAbode1.isPantheonFull());
   }
 
-
   @Test
   public void primordialChaosStartsEmpty(){
     assertEquals(0, fate.primordialChaosCount());
   }
 
+  // @Test
+  // public void fateCanCastDownGods(){
+  //   celestialAbode1.deify(god1);
+  //   fate.castDown(celestialAbode1);
+  //   assertEquals(0, celestialAbode1.pantheonCount());
+  // }
 
-
+  @Test
+  public void abodeCanCastGodsOut(){
+    celestialAbode1.deify(god1);
+    celestialAbode1.castOut(god1);
+    assertEquals(0, celestialAbode1.pantheonCount());
+  }
 
 
 }
