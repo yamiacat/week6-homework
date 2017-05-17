@@ -52,7 +52,10 @@ public void photographerCanGiveBlackOpsStatus(){
 }
 
 
-
+@Test
+public void photoJournalCanBeRead(){
+  assertEquals(47, photospecialist.numberOfPhotos());
+}
 
 
 

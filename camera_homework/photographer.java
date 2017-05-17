@@ -9,6 +9,13 @@ public class Photographer {
     this.agentName = agentName;
     this.cameraList = new ArrayList<Printable>();
     this.photoJournal = new HashMap<String, Integer>();
+    photoJournal.put("Monday", 6);
+    photoJournal.put("Tuesday", 8);
+    photoJournal.put("Wednesday", 19);
+    photoJournal.put("Thursday", 3);
+    photoJournal.put("Friday", 7);
+    photoJournal.put("Saturday", 4);
+    photoJournal.put("Sunday", 0);
   }
 
   public String getName(){
@@ -47,10 +54,18 @@ public class Photographer {
   }
 
 
+  public int numberOfPhotos(){
+    Integer photoAmounts = 0;
+    Collection<Integer> photoValues = photoJournal.values();
+    ArrayList<Integer> listOfValues = new ArrayList<Integer>(photoValues);
+    for (Integer value : listOfValues){
+      photoAmounts += value;
+    }
+    return photoAmounts;
+  }
 
 
-
-
+  
 
 
 
