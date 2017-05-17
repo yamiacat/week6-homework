@@ -54,6 +54,10 @@ public class Photographer {
   }
 
 
+  public void addToJournal(String day, Integer numberOfPhotos) {
+
+  }
+
   public int numberOfPhotos(){
     Integer photoAmounts = 0;
     Collection<Integer> photoValues = photoJournal.values();
@@ -64,10 +68,23 @@ public class Photographer {
     return photoAmounts;
   }
 
-
-  
-
-
+// //TUTOR METHODS!
+//
+//   public Integer totalNumberOfPhotos(){
+//     Integer total = 0;
+//     for (String day : photoJournal.keySet()){
+//       total += photoJournal.get(day);
+//     }
+//     return total;
+//   }
+//
+//   public Integer anotherNumberOfPhotos(){
+//     Integer total = 0;
+//     for (Integer value : photoJournal.values()){
+//       total += value;
+//     }
+//     return total;
+//   }
 
 
 
