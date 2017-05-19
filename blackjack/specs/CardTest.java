@@ -8,7 +8,8 @@ public class CardTest {
 
   @Before
   public void before(){
-    card1 = new Card(CardSuit.SPADES, CardRank.ACE, 11);
+    card1 = new Card(CardSuit.SPADES, CardRank.ACE);
+    card1.setValue(11);
   }
 
   @Test
@@ -26,6 +27,12 @@ public class CardTest {
   @Test
   public void canGetValue(){
     assertEquals(11, card1.getValue());
+  }
+
+  @Test
+  public void canSetValue(){
+    card1.setValue(1);
+    assertEquals(1, card1.getValue());
   }
 
 }

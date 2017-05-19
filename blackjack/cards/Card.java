@@ -6,7 +6,7 @@ public class Card {
   private CardRank rank;
   private int value;
 
-  public Card(CardSuit suit, CardRank rank, int value) {
+  public Card(CardSuit suit, CardRank rank) {
     this.suit = suit;
     this.rank = rank;
     this.value = value;
@@ -23,4 +23,11 @@ public class Card {
   public int getValue(){
     return this.value;
   }
+
+  public void setValue(int newValue){
+    this.value = newValue;
+  }
+
+  
+
 }
