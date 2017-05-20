@@ -36,6 +36,20 @@ public class PlayerTest {
     assertEquals(1, player1.unplayedHandCount());
   }
 
-  
+  @Test
+  public void canPlayCard() {
+    player1.receiveCard(card1);
+    player1.playCard();
+    assertEquals(1, player1.handCount());
+    assertEquals(0, player1.unplayedHandCount());
+  }
+
+  @Test
+  public void playedCardsCanBeSeen() {
+    player1.receiveCard(card1);
+    player1.playCard();
+    assertEquals("ACE of SPADES", player1.getHand().get(0).getCardName());
+  }
+
 
 }

@@ -16,23 +16,30 @@ public class Player {
   }
 
 
-  public String getName(){
+  public String getName() {
     return this.name;
   }
 
-  public int handCount(){
+  public int handCount() {
     return this.hand.size();
   }
 
-  public int unplayedHandCount(){
+  public int unplayedHandCount() {
     return this.unplayedHand.size();
   }
 
-  public void receiveCard(Scorable card){
+  public void receiveCard(Scorable card) {
     this.unplayedHand.add(card);
   }
 
+  public void playCard() {
+    if (unplayedHandCount() > 0) {
+      hand.add(unplayedHand.remove(0));
+    }
+  }
 
-
+  public ArrayList<Scorable> getHand() {
+    return this.hand;
+  }
 
 }
