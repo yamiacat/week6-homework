@@ -6,18 +6,22 @@ public class DeckGenerator {
 
   private String intendedGame;
   private ArrayList<Scorable> deck;
+  private int numberOfPacks;
 
-  public DeckGenerator(String intendedGame) {
+  public DeckGenerator(String intendedGame, int numberOfPacks) {
     this.intendedGame = intendedGame;
     this.deck = new ArrayList<Scorable>();
+    this.numberOfPacks = numberOfPacks;
 
     CardSuit[] allSuits = CardSuit.values();
     CardRank[] allRanks = CardRank.values();
 
-    for (CardSuit suit : allSuits){
-      for (CardRank rank : allRanks){
-        Scorable card = new Card(suit, rank);
-        deck.add(card);
+    for (int i = 0; i < this.numberOfPacks; i++) {
+      for (CardSuit suit : allSuits){
+        for (CardRank rank : allRanks){
+          Scorable card = new Card(suit, rank);
+          deck.add(card);
+        }
       }
     }
     Collections.shuffle(deck);
