@@ -1,4 +1,5 @@
 import cards.*;
+import players.*;
 import java.util.*;
 
 
@@ -7,8 +8,6 @@ public class Runner {
     DeckGenerator generatedDeck = new DeckGenerator("Blackjack");
 
     System.out.println("Cards are:");
-    // ArrayList<Card> deck = GeneratedDeck.getDeck();
-
     System.out.println(generatedDeck.printAllCards());
 
   }

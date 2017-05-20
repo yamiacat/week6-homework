@@ -43,7 +43,7 @@ public class DeckGenerator {
   public String printAllCards(){
     String returnString = "";
     for (Card card : deck){
-      returnString += card.getRank() + " of " + card.getSuit() + "\n";
+      returnString += card.getCardName() + "\n";
     }
     return returnString;
   }

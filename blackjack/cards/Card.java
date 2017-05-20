@@ -4,12 +4,12 @@ public class Card {
 
   private CardSuit suit;
   private CardRank rank;
-  private int value;
+  // private int value;
 
   public Card(CardSuit suit, CardRank rank) {
     this.suit = suit;
     this.rank = rank;
-    this.value = value;
+    // this.value = value;
   }
 
   public CardSuit getSuit(){
@@ -20,14 +20,22 @@ public class Card {
     return this.rank;
   }
 
-  public int getValue(){
-    return this.value;
+  public String getCardName() {
+    String returnString = "";
+    returnString += this.rank.name();
+    returnString += " of ";
+    returnString += this.suit.name();
+    return returnString;
   }
+  //
+  // public int getValue(){
+  //   return this.value;
+  // }
+  //
+  // public void setValue(int newValue){
+  //   this.value = newValue;
+  // }
 
-  public void setValue(int newValue){
-    this.value = newValue;
-  }
 
-  
 
 }
