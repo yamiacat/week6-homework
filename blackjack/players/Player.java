@@ -5,14 +5,34 @@ import cards.*;
 public class Player {
 
   private String name;
-  private ArrayList<Card> hand;
+  private ArrayList<Scorable> hand;
 // //USEFUL IN OTHER GAMES
-//   private ArrayList<Card> unplayedHand;
+  private ArrayList<Scorable> unplayedHand;
 
   public Player(String name) {
     this.name = name;
-    this.hand = new ArrayList<Card>();
+    this.hand = new ArrayList<Scorable>();
+    this.unplayedHand = new ArrayList<Scorable>();
   }
+
+
+  public String getName(){
+    return this.name;
+  }
+
+  public int handCount(){
+    return this.hand.size();
+  }
+
+  public int unplayedHandCount(){
+    return this.unplayedHand.size();
+  }
+
+  public void receiveCard(Scorable card){
+    this.unplayedHand.add(card);
+  }
+
+
 
 
 }

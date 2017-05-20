@@ -1,15 +1,15 @@
 package cards;
 
-public class Card {
+public class Card implements Scorable {
 
   private CardSuit suit;
   private CardRank rank;
-  // private int value;
+  private int value;
 
   public Card(CardSuit suit, CardRank rank) {
     this.suit = suit;
     this.rank = rank;
-    // this.value = value;
+    this.value = value;
   }
 
   public CardSuit getSuit(){
@@ -27,11 +27,11 @@ public class Card {
     returnString += this.suit.name();
     return returnString;
   }
-  //
-  // public int getValue(){
-  //   return this.value;
-  // }
-  //
+
+  public int getValue(){
+    return this.value;
+  }
+
   // public void setValue(int newValue){
   //   this.value = newValue;
   // }
