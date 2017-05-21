@@ -40,7 +40,7 @@ public class DeckGeneratorTest {
 
   // @Test
   // public void cardsAreGivenScores() {
-  //
+  //   deck.get()
   // }
 
 }

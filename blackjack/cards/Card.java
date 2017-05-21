@@ -33,7 +33,7 @@ public class Card implements Scorable {
   }
 
   public void setScore(int newScore){
-    this.score = newScore;
+    this.score += newScore;
   }
 
 

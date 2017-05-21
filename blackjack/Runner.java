@@ -12,6 +12,7 @@ public class Runner {
     Scanner in = new Scanner(System.in);
     GameGenerator startGame;
     GameOperator game;
+    Rulable blackjackRules = new BlackjackRules();
 
     System.out.println("Welcome to BLACKJACKOPOLIS...");
 
@@ -21,7 +22,7 @@ public class Runner {
     System.out.println("How many packs of cards in the deck?");
     numberOfPacks = in.nextInt();
 
-    startGame = new GameGenerator("Blackjack", numberOfPlayers+1, numberOfPacks);
+    startGame = new GameGenerator(blackjackRules, numberOfPlayers+1, numberOfPacks);
 
     System.out.println("OK. This game of " + startGame.getGameName() + " is being played with a " + startGame.countPacks() + " pack deck.");
     System.out.println(startGame.listPlayerNames() + "are at the table.\n");
@@ -33,7 +34,7 @@ public class Runner {
     // System.out.println("Press any key to play...");
     // in.nextLine();
 
-    // System.out.println(generatedDeck.printAllCards());
+    // System.out.println(game.printAllCards());
 
   }
 }

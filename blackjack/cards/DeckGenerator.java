@@ -32,6 +32,12 @@ public class DeckGenerator {
     }
 
 
+    for (Scorable card : this.deck) {
+      Integer score = (intendedGame.getSuitScores()).get(card.getSuit());
+      int intScore = score.intValue();
+      card.setScore(intScore);
+    }
+
     Collections.shuffle(deck);
 
   }
@@ -61,7 +67,7 @@ public class DeckGenerator {
   public String printAllCards(){
     String returnString = "";
     for (Scorable card : deck){
-      returnString += card.getCardName() + "\n";
+      returnString += card.getCardName() + " scoring " + card.getScore() + "\n";
     }
     return returnString;
   }

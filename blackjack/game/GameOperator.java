@@ -46,4 +46,12 @@ public class GameOperator {
     return returnString;
   }
 
+  public String printAllCards(){
+    String returnString = "";
+    for (Scorable card : deck){
+      returnString += card.getCardName() + " scoring " + card.getScore() + "\n";
+    }
+    return returnString;
+  }
+
 }
