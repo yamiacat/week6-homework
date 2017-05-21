@@ -4,12 +4,12 @@ public class Card implements Scorable {
 
   private CardSuit suit;
   private CardRank rank;
-  private int value;
+  private int score;
 
   public Card(CardSuit suit, CardRank rank) {
     this.suit = suit;
     this.rank = rank;
-    this.value = value;
+    this.score = score;
   }
 
   public CardSuit getSuit(){
@@ -28,13 +28,13 @@ public class Card implements Scorable {
     return returnString;
   }
 
-  public int getValue(){
-    return this.value;
+  public int getScore(){
+    return this.score;
   }
 
-  // public void setValue(int newValue){
-  //   this.value = newValue;
-  // }
+  public void setScore(int newScore){
+    this.score = newScore;
+  }
 
 
 

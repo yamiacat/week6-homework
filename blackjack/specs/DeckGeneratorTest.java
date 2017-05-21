@@ -37,4 +37,10 @@ public class DeckGeneratorTest {
     deck.dealCard();
     assertEquals(51, deck.countDeck());
   }
+
+  // @Test
+  // public void cardsAreGivenScores() {
+  //
+  // }
+
 }

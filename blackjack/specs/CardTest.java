@@ -31,14 +31,14 @@ public class CardTest {
 
 
   // @Test
-  // public void canGetValue(){
-  //   assertEquals(11, card1.getValue());
+  // public void canGetScore(){
+  //   assertEquals(11, card1.getScore());
   // }
   //
   // @Test
-  // public void canSetValue(){
-  //   card1.setValue(1);
-  //   assertEquals(1, card1.getValue());
+  // public void canSetScore(){
+  //   card1.setScore(1);
+  //   assertEquals(1, card1.getScore());
   // }
 
 }

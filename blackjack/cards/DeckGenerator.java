@@ -24,6 +24,14 @@ public class DeckGenerator {
         }
       }
     }
+
+    for (Scorable card : this.deck) {
+      Integer score = (intendedGame.getRankScores()).get(card.getRank());
+      int intScore = score.intValue();
+      card.setScore(intScore);
+    }
+
+
     Collections.shuffle(deck);
 
   }

@@ -20,5 +20,10 @@ public class BlackjackRulesTest {
     assertEquals("Blackjack", startGame.getGameName());
   }
 
+  @Test
+  public void rulesContainRankScores() {
+    assertEquals(13, blackjackRules.getRankScores().size());
+  }
+
 
 }
