@@ -33,4 +33,15 @@ public class GameOperator {
   return this.allHands;
   }
 
+  public String reportAllHands(){
+    String returnString = "";
+    for (Player player : playerList) {
+      returnString += player.getName() + " plays: ";
+      for (Scorable card : player.getHand()){
+        returnString += card.getCardName() + "\n";
+      }
+    }
+    return returnString;
+  }
+
 }

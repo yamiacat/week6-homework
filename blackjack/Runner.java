@@ -11,9 +11,10 @@ public class Runner {
     int numberOfPacks;
     Scanner in = new Scanner(System.in);
     GameGenerator startGame;
+    GameOperator game;
 
     System.out.println("Welcome to BLACKJACKOPOLIS...");
-    pressReturnToContinue();
+
     System.out.println("How many players? (between 1 - 3)");
     numberOfPlayers = in.nextInt();
 
@@ -23,7 +24,11 @@ public class Runner {
     startGame = new GameGenerator("Blackjack", numberOfPlayers+1, numberOfPacks);
 
     System.out.println("OK. This game of " + startGame.getGameName() + " is being played with a " + startGame.countPacks() + " pack deck.");
-    System.out.println(startGame.listPlayerNames() + "are at the table.");
+    System.out.println(startGame.listPlayerNames() + "are at the table.\n");
+
+    game = new GameOperator(startGame);
+
+    System.out.println(game.reportAllHands());
 
     // System.out.println("Press any key to play...");
     // in.nextLine();
