@@ -1,15 +1,17 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 import cards.*;
+import game.*;
 
 public class DeckGeneratorTest {
 
   DeckGenerator deck;
   DeckGenerator doubleDeck;
+  Rulable blackjackRules = new BlackjackRules();
 
   @Before
   public void before() {
-    deck = new DeckGenerator("Blackjack", 1);
+    deck = new DeckGenerator(blackjackRules, 1);
   }
 
 
@@ -26,7 +28,7 @@ public class DeckGeneratorTest {
 
   @Test
   public void canHaveMultiplePackDeck() {
-    doubleDeck = new DeckGenerator("Blackjack", 2);
+    doubleDeck = new DeckGenerator(blackjackRules, 2);
     assertEquals(104, doubleDeck.countDeck());
   }
 

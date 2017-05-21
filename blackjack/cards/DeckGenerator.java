@@ -1,14 +1,14 @@
 package cards;
 import java.util.*;
-
+import game.*;
 
 public class DeckGenerator {
 
-  private String intendedGame;
+  private Rulable intendedGame;
   private ArrayList<Scorable> deck;
   private int numberOfPacks;
 
-  public DeckGenerator(String intendedGame, int numberOfPacks) {
+  public DeckGenerator(Rulable intendedGame, int numberOfPacks) {
     this.intendedGame = intendedGame;
     this.deck = new ArrayList<Scorable>();
     this.numberOfPacks = numberOfPacks;
@@ -33,7 +33,7 @@ public class DeckGenerator {
   }
 
   public String getIntendedGame() {
-    return this.intendedGame;
+    return this.intendedGame.getGameName();
   }
 
   public int countDeck() {

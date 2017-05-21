@@ -1,12 +1,13 @@
 package game;
 
+import game.*;
 import cards.*;
 import players.*;
 import java.util.*;
 
 public class GameGenerator {
 
-  private String gameName;
+  private Rulable intendedGame;
   private int numberOfPlayers;
   private int numberOfPacks;
   private ArrayList<Player> potentialPlayerList;
@@ -17,13 +18,13 @@ public class GameGenerator {
   private Player player3;
   private DeckGenerator deck;
 
-  public GameGenerator(String gameName, int numberOfPlayers, int numberOfPacks) {
-    this.gameName = gameName;
+  public GameGenerator(Rulable intendedGame, int numberOfPlayers, int numberOfPacks) {
+    this.intendedGame = intendedGame;
     this.numberOfPlayers = numberOfPlayers;
     this.numberOfPacks = numberOfPacks;
     this.potentialPlayerList = new ArrayList<Player>();
     this.playerList = new ArrayList<Player>();
-    this.deck = new DeckGenerator(this.gameName, this.numberOfPacks);
+    this.deck = new DeckGenerator(this.intendedGame, this.numberOfPacks);
 
 
     //PREGENERATED PLAYERS
@@ -48,7 +49,7 @@ public class GameGenerator {
 
 
   public String getGameName() {
-    return this.gameName;
+    return this.intendedGame.getGameName();
   }
 
   public int countPlayers() {

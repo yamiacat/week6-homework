@@ -19,6 +19,8 @@ public class GameOperator {
     for (Player player : playerList) {
       player.receiveCard(this.deck.remove(0));
       player.playCard();
+      // player.receiveCard(this.deck.remove(0));
+      // player.playCard();
     }
   }
 

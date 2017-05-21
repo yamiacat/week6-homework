@@ -7,10 +7,11 @@ import game.*;
 public class GameOperatorTest {
   GameGenerator startGame;
   GameOperator game;
+  Rulable blackjackRules = new BlackjackRules();
 
   @Before
   public void before() {
-    startGame = new GameGenerator("Blackjack", 2 ,1);
+    startGame = new GameGenerator(blackjackRules, 2 ,1);
     game = new GameOperator(startGame);
   }
 

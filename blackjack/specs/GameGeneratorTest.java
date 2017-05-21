@@ -5,10 +5,11 @@ import game.*;
 public class GameGeneratorTest {
 
   GameGenerator game;
+  Rulable blackjackRules = new BlackjackRules();
 
   @Before
   public void before(){
-    game = new GameGenerator("Blackjack", 2, 1);
+    game = new GameGenerator(blackjackRules, 2, 1);
   }
 
 
@@ -29,13 +30,13 @@ public class GameGeneratorTest {
 
   @Test
   public void canHaveFourPlayers() {
-  GameGenerator bigGame = new GameGenerator("Blackjack", 4, 4);
+  GameGenerator bigGame = new GameGenerator(blackjackRules, 4, 4);
     assertEquals(4, bigGame.countPlayers());
   }
 
   @Test
   public void canHaveFourPacks() {
-  GameGenerator bigGame = new GameGenerator("Blackjack", 4, 4);
+  GameGenerator bigGame = new GameGenerator(blackjackRules, 4, 4);
     assertEquals(4, bigGame.countPacks());
   }
 
