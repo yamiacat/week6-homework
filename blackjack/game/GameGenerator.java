@@ -23,11 +23,11 @@ public class GameGenerator {
     this.numberOfPacks = numberOfPacks;
     this.potentialPlayerList = new ArrayList<Player>();
     this.playerList = new ArrayList<Player>();
-
+    this.deck = new DeckGenerator(this.gameName, this.numberOfPacks);
 
 
     //PREGENERATED PLAYERS
-    Player player0 = new Player("Dealer");
+    Player player0 = new Player("The Dealer");
     Player player1 = new Player("Lemmy");
     Player player2 = new Player("Max");
     Player player3 = new Player("Nigel");
@@ -42,7 +42,7 @@ public class GameGenerator {
       playerList.add(potentialPlayerList.get(i));
     }
 
-    deck = new DeckGenerator(this.gameName, this.numberOfPacks);
+
 
   }
 
@@ -59,7 +59,20 @@ public class GameGenerator {
     return this.playerList;
   }
 
+  public String listPlayerNames() {
+    String returnList = "";
+    for (Player player : this.playerList) {
+      returnList += (player.getName() + ", ");
+    }
+    return returnList;
+  }
+
   public int countPacks(){
     return this.numberOfPacks;
   }
+
+  public ArrayList<Scorable> getDeck(){
+    return this.deck.getDeck();
+  }
+
 }

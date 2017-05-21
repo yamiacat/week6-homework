@@ -15,7 +15,7 @@ public class Player {
     this.unplayedHand = new ArrayList<Scorable>();
   }
 
-
+ 
   public String getName() {
     return this.name;
   }

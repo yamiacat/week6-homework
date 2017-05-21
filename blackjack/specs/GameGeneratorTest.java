@@ -24,7 +24,7 @@ public class GameGeneratorTest {
 
   @Test
   public void firstPlayerIsTheDealer() {
-    assertEquals("Dealer", game.getPlayers().get(0).getName());
+    assertEquals("The Dealer", game.getPlayers().get(0).getName());
   }
 
   @Test

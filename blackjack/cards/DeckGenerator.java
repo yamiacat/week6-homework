@@ -32,18 +32,22 @@ public class DeckGenerator {
     deck.add(card);
   }
 
-  public String getIntendedGame(){
+  public String getIntendedGame() {
     return this.intendedGame;
   }
 
-  public int countDeck(){
+  public int countDeck() {
     return deck.size();
   }
 
-  public ArrayList<Scorable> getDeck(){
+  public ArrayList<Scorable> getDeck() {
     return deck;
   }
 
+
+  public Scorable dealCard() {
+    return (this.deck.remove(0));
+  }
 
 // THIS WAS MADE TO PRINT ALL TO CONSOLE JUST TO SEE WHATS GOING ON IN THE DECK
   public String printAllCards(){
