@@ -8,13 +8,12 @@ public class Turn implements Turnable {
 
   private ArrayList<Player> playerList;
   private ArrayList<Scorable> deck;
-  private HashMap <Player, ArrayList<Scorable>> allHands;
 
 
   public Turn(GameGenerator game) {
     this.playerList = game.getPlayers();
     this.deck = game.getDeck();
-    this.allHands = new HashMap<Player, ArrayList<Scorable>>();
+
 
     for (Player player : playerList) {
       player.receiveCard(this.deck.remove(0));
@@ -30,12 +29,6 @@ public class Turn implements Turnable {
     return this.playerList;
   }
 
-  public HashMap <Player, ArrayList<Scorable>> getAllHands() {
-    for (Player player : playerList) {
-      allHands.put(player, player.getHand());
-    }
-  return this.allHands;
-  }
 
   public String reportAllHands(){
     String returnString = "";

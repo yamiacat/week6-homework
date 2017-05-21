@@ -1,3 +1,5 @@
+// I HAVE NO CLUE WHETHER THIS IS A USEFUL THING TO DO WITH AN INTERFACE?
+
 package game;
 
 import java.util.*;
@@ -8,7 +10,6 @@ public interface Turnable {
 
 
   public ArrayList<Player> getPlayers();
-  public HashMap <Player, ArrayList<Scorable>> getAllHands();
   public String reportAllHands();
   public String printAllCards();
 }

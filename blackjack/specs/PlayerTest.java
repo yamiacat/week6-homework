@@ -12,6 +12,7 @@ public class PlayerTest {
   public void before() {
     player1 = new Player("Lemmy");
     card1 = new Card(CardSuit.SPADES, CardRank.ACE);
+    card1.setScore(11);
   }
 
   @Test
@@ -51,5 +52,12 @@ public class PlayerTest {
     assertEquals("ACE of SPADES", player1.getHand().get(0).getCardName());
   }
 
+
+  @Test
+  public void playedCardsCanBeScored() {
+    player1.receiveCard(card1);
+    player1.playCard();
+    assertEquals(11, player1.getHandScore());
+  }
 
 }

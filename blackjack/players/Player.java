@@ -15,7 +15,7 @@ public class Player {
     this.unplayedHand = new ArrayList<Scorable>();
   }
 
- 
+
   public String getName() {
     return this.name;
   }
@@ -40,6 +40,14 @@ public class Player {
 
   public ArrayList<Scorable> getHand() {
     return this.hand;
+  }
+
+  public int getHandScore(){
+    int total = 0;
+    for (Scorable card : this.hand) {
+      total += card.getScore();
+    }
+    return total;
   }
 
 }

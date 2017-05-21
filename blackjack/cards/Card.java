@@ -9,7 +9,7 @@ public class Card implements Scorable {
   public Card(CardSuit suit, CardRank rank) {
     this.suit = suit;
     this.rank = rank;
-    this.score = score;
+    this.score = 0;
   }
 
   public CardSuit getSuit(){
