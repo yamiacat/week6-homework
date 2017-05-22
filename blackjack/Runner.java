@@ -29,10 +29,9 @@ public class Runner {
 
     game = new GameOperator(startGame);
 
-    System.out.println(game.reportAllHands());
+    System.out.println(game.getTurn().reportAllHands());
 
-    // System.out.println("Press any key to play...");
-    // in.nextLine();
+    System.out.println(game.getScoreResults().reportWinningPlayers() + " scores highest!");
 
     // System.out.println(game.printAllCards());
 
