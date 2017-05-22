@@ -13,14 +13,25 @@ public class Score {
 
   public Score(Turn turn) {
     this.winningPlayers = new ArrayList<Player>();
-    this.players = players;
     this.turn = turn;
     ArrayList<Player> players = turn.getPlayers();
 
     HashMap<Player, Integer> scoreHash = new HashMap<>();
+    this.scoreHash = scoreHash;
+
+
+// TESTED THIS BY CHANGING ALL CARD SCORES TO 11
 
     for (Player player : players) {
-      Integer score = player.getHandScore();
+      ArrayList<Scorable> hand = player.getHand();
+      Integer score = 0;
+      for (Scorable card : hand) {
+        score += card.getScore();
+      if (score > 21) {
+        score -= 10;
+        }
+      }
+
       scoreHash.put(player, score);
     }
 
@@ -36,7 +47,13 @@ public class Score {
     return this.winningPlayers;
   }
 
-
+  public String reportAllHandScores() {
+    String returnList = "";
+    for (Map.Entry <Player, Integer> entry: scoreHash.entrySet()) {
+      returnList += (entry.getKey().getName() + " scores " + entry.getValue() + "\n");
+      }
+    return returnList;
+  }
 
   public String reportWinningPlayers() {
     String returnList = "";

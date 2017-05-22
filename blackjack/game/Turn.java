@@ -41,13 +41,6 @@ public class Turn implements Turnable {
     return returnString;
   }
 
-  public String reportAllHandScores() {
-    String returnList = "";
-    for (Player player : playerList) {
-      returnList += (player.getName() + " scores " + player.getHandScore() + ", ");
-    }
-    return returnList;
-  }
 
   public String printAllCards(){
     String returnString = "";

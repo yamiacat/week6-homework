@@ -18,13 +18,13 @@ public class TurnTest {
   }
 
   @Test
-  public void playersPlayCard() {
-    assertEquals(1, game.getTurn().getPlayers().get(0).handCount());
+  public void playersPlayCards() {
+    assertEquals(2, game.getTurn().getPlayers().get(0).handCount());
   }
 
   @Test
-  public void bothPlayersPlayCard() {
-    assertEquals(1, game.getTurn().getPlayers().get(1).handCount());
+  public void bothPlayersPlayCards() {
+    assertEquals(2, game.getTurn().getPlayers().get(1).handCount());
   }
 
 

@@ -31,7 +31,7 @@ public class Runner {
 
     System.out.println(game.getTurn().reportAllHands());
 
-    System.out.println(game.getTurn().reportAllHandScores()+ "!");
+    System.out.println(game.getScoreResults().reportAllHandScores());
 
     System.out.println(game.getScoreResults().reportWinningPlayers() + " scores highest!");
 
