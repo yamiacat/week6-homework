@@ -13,7 +13,7 @@ public class Score {
 
   public Score(Turn turn) {
     this.winningPlayers = new ArrayList<Player>();
-
+    this.players = players;
     this.turn = turn;
     ArrayList<Player> players = turn.getPlayers();
 
@@ -35,6 +35,8 @@ public class Score {
   public ArrayList<Player> getWinningPlayers() {
     return this.winningPlayers;
   }
+
+
 
   public String reportWinningPlayers() {
     String returnList = "";
